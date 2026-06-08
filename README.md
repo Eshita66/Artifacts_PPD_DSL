@@ -307,7 +307,7 @@ Approximate runtime on a standard desktop machine:
 | RQ1–RQ2 reproduction      | 1–3 min  |
 | RQ3 reproduction          | <1 min   |
 | RQ4 reproduction          | <1 min   |
-| Full results reproduction | 5–8 min |
+| Full results reproduction | 5–7 min |
 
 Data collection pipelines may require additional time depending on hardware configuration, local LLM settings, and network conditions.
 
