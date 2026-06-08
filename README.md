@@ -35,7 +35,7 @@ Artifacts_PPD_DSL/
 │   ├── reproduce_category_risk_and_popularity.py
 │   └── reproduce_alpha_sensitivity.py
 │
-├── DataSafetyScraping/
+├── DataSafetyScrapping/
 │
 ├── LLM_Privacify/
 │
@@ -187,13 +187,11 @@ This script computes cosine similarity scores between Privacy Policy and Data Sa
 
 Reproduces Figure 8.
 
-Run:
-
 ```bash
 python reproduce_srs_distribution.py
 ```
 
-Output:
+Expected Output:
 
 ```text
 figures/scatter_SRS-Ow_vs_SRS-S_and_SRS-C_unlabeled_and_clustered_2.png
