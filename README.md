@@ -106,7 +106,7 @@ RQ1 is reproduced using two scripts.
 This generates Figure 2.
 
 ```bash
-python scripts/reproduce_prevalence.py
+python reproduce_prevalence.py
 ```
 Expected Outputs:
 figures/overall_agreement_vs_misalignment.png
@@ -116,8 +116,9 @@ The script also prints agreement and misalignment rates for collection and shari
 
 This generates Figure 3.
 
-python scripts/reproduce_kappaScore.py
-
+```bash
+python reproduce_kappaScore.py
+```
 Expected Output:
 figures/violin_kappa_distribution.png
 
@@ -131,7 +132,7 @@ Reproduces Figure 4, Figure 5, and Figure 6.
 Run:
 
 ```bash
-python scripts/reproduce_prevalence.py
+python reproduce_prevalence.py
 ```
 
 Expected outputs:
@@ -146,7 +147,7 @@ figures/privacy_policy_only_misalignment.png
 ### Step 1: Generate cosine similarity dataset
 
 ```bash
-python scripts/generate_cosine_similarity_dataset.py
+python generate_cosine_similarity_dataset.py
 ```
 
 Output:
@@ -158,7 +159,7 @@ data/cosinesimilarity/global_label_vs_policy_similarity1460.csv
 ### Step 2: Generate Figure 7
 
 ```bash
-python scripts/reproduce_cosine_ecdf.py
+python reproduce_cosine_ecdf.py
 ```
 
 Output:
@@ -175,7 +176,7 @@ Reproduces Figure 8.
 Run:
 
 ```bash
-python scripts/reproduce_srs_distribution.py
+python reproduce_srs_distribution.py
 ```
 
 Output:
@@ -199,7 +200,7 @@ Reproduces Figure 9 and Figure 10.
 Run:
 
 ```bash
-python scripts/reproduce_category_risk_and_popularity.py
+python reproduce_category_risk_and_popularity.py
 ```
 
 Outputs:
@@ -222,8 +223,10 @@ Sensitivity analysis of risk-tier distribution under alternative 𝛼 values
 
 Run:
 
-python scripts/reproduce_alpha_sensitivity.py
+```bash
+python reproduce_alpha_sensitivity.py
 
+```
 Expected outputs:
 
 results/alpha_sensitivity_results.xlsx
