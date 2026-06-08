@@ -240,12 +240,6 @@ Expected misalignment rates:
 | Collection | ≈ 33.1%           |
 | Sharing    | ≈ 31.1%           |
 
-Expected misaligned cells:
-
-| Operation  | Misaligned Cells |
-| ---------- | ---------------- |
-| Collection | 28,066           |
-| Sharing    | 26,322           |
 
 ### Figure 3: Cohen's κ Analysis
 
