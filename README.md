@@ -108,7 +108,7 @@ RQ1 is reproduced using two scripts.
 ### Step 1: Reproduce overall agreement and misalignment rates
 
 This generates Figure 2.
-
+Run:
 ```bash
 python reproduce_prevalence.py
 ```
@@ -123,7 +123,7 @@ In addition to Figure 2, the script reports:
 ### Step 2: Reproduce Cohen's κ analysis
 
 This generates Figure 3.
-
+Run:
 ```bash
 python reproduce_kappaScore.py
 ```
@@ -164,6 +164,7 @@ In addition to generating these figures, the script reports:
 ### Part B: Semantic Consistency Analysis
 
 ### Step 1: Generate cosine similarity dataset
+Run:
 ```bash
 python generate_cosine_similarity_dataset.py
 ```
@@ -172,11 +173,12 @@ Expected Output:
 ../data/cosinesimilarity/global_label_vs_policy_similarity1460.csv
 ```
 ### Step 2: Generate the ECDF of Cosine Similarity
-Reproduces Figure 7
+Reproduces Figure 7.
+Run:
 ```bash
 python reproduce_cosine_ecdf.py
 ```
-Expected Output:
+Expected Outputs:
 ```text
 ../figures/ecdf_cosine_similarity.png
 ../results/cosine_ecdf_summary.csv
@@ -186,65 +188,71 @@ This script computes cosine similarity scores between Privacy Policy and Data Sa
 ## Claim 3: Sensitivity Risk Score Analysis (RQ3)
 
 Reproduces Figure 8.
-
+Run:
 ```bash
 python reproduce_srs_distribution.py
 ```
 
-Expected Output:
-
+Expected Outputs:
 ```text
-figures/scatter_SRS-Ow_vs_SRS-S_and_SRS-C_unlabeled_and_clustered_2.png
+../figures/scatter_SRS-Ow_vs_SRS-S_and_SRS-C_unlabeled_and_clustered_2.png
+../results/srs_tier_summary.csv
 ```
 The script computes:
-
-* SRS-C (collection risk)
-* SRS-S (sharing risk)
-* SRS-O-w (overall weighted risk)
-* Risk-tier distributions
+- SRS-C (collection risk)
+- SRS-S (sharing risk)
+- SRS-O (overall risk)
+- SRS-O-w (overall weighted risk)
+- Risk-tier distributions
 
 ---
 
 ## Claim 4: App Category-Level Risk Analysis (RQ4)
 
-Reproduces Figure 9 and Figure 10.
-
+Reproduces Figures 9 and 10.
 Run:
-
 ```bash
 python reproduce_category_risk_and_popularity.py
 ```
+Expected outputs:
+```text
+../figures/mean_SRS_by_category_top20.png
+../figures/risk_tier_distribution_by_category_top20.png
+../results/category_srs_stats.csv
+../results/risk_tier_distribution_by_category_top20.csv
+```
+The script computes application category-level privacy misalignment risk statistics, identifies the app categories with the highest privacy misalignment risk, and examines how risk is distributed across low-, medium-, and high-risk tiers within each category.
 
-Outputs:
+### Additional Quantitative Analysis (Appendix E)
+
+The same script used for RQ4 also reproduces the popularity-based analyses reported in Appendix E (Figures 12 and 13).
+
+Additional outputs:
 
 ```text
-figures/mean_SRS_by_category_top20.png
-figures/risk_tier_distribution_by_category_top20.png
+../figures/rating_vs_SRS-O-weighted.png
+../figures/downloads_vs_SRS-O-weighted_log10.png
+../results/srs_popularity_correlation_matrix.csv
 ```
-In addition, this script reproduces the popularity-based analyses reported in the appendix E, including:
-
-figures/rating_vs_SRS-O-weighted.png
-figures/downloads_vs_SRS-O-weighted_log10.png
-
-and the associated correlation statistics between privacy risk and application popularity metrics.
+These outputs examine the relationship between privacy misalignment risk and application popularity metrics, including user ratings, review counts, and download counts.
 
 
-## Claim 5: Robustness of SRS-based risk stratification (Appendix H) 
+## Appendix H: Alpha Sensitivity Analysis
 
-Sensitivity analysis of risk-tier distribution under alternative 𝛼 values
+Reproduces Table 5.
 
 Run:
-
 ```bash
 python reproduce_alpha_sensitivity.py
 
 ```
 Expected outputs:
 
-results/alpha_sensitivity_results.xlsx
-results/alpha_sensitivity_summary.csv
+../results/alpha_sensitivity_results.xlsx
+../results/alpha_sensitivity_summary.csv
 
-This reproduces the alpha-sensitivity analysis reported in the appendix H and verifies that the overall conclusions remain stable across different settings.
+This reproduces the sensitivity analysis reported in Table 5 and evaluates the robustness of the SRS-based risk stratification under alternative α parameter settings.
+
 
 # Data Collection Pipelines
 
