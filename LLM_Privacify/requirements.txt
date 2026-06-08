@@ -1,27 +1,35 @@
-# Core LLM + LangChain stack
-openai>=1.30.0,<2.0.0
-tiktoken>=0.7.0,<0.8.0
+# Core LLM stack
 
-langchain>=0.3.0,<0.4.0
-langchain-community>=0.3.0,<0.4.0
-langchain-core>=0.3.0,<0.4.0
+openai==1.75.0
+tiktoken==0.9.0
 
-# Pydantic v2 (needed for new LangChain)
-pydantic>=2.6.0,<3.0.0
+# LangChain
 
-# Web scraping / loading for WebBaseLoader
+langchain==0.3.23
+langchain-community==0.3.21
+langchain-core==0.3.52
+langchain-openai==0.3.13
+langchain-text-splitters==0.3.8
+langsmith==0.3.31
+
+# Pydantic
+
+pydantic==2.11.10
+pydantic-settings==2.8.1
+
+# Web loading / scraping
+
 requests>=2.32.0,<3.0.0
 beautifulsoup4>=4.12.0,<5.0.0
-lxml>=5.0.0,<6.0.0
+lxml==5.2.1
 
-# Data / Excel / plotting (for your other scripts in this repo)
-pandas>=2.2.0,<3.0.0
-numpy>=1.26.0,<2.0.0
-matplotlib>=3.8.0,<4.0.0
-XlsxWriter>=3.2.0,<4.0.0
+# Data processing
 
-# Env variables & progress bars (common in your scripts)
-python-dotenv>=1.0.0,<2.0.0
-tqdm>=4.66.0,<5.0.0
+pandas==2.2.2
+numpy==1.26.4
 
-zstandard>=0.22.0
+# Utilities
+
+python-dotenv>=1.0.1
+tqdm>=4.66.0
+XlsxWriter==3.2.9
