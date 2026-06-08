@@ -94,7 +94,7 @@ Successful execution should:
 ../results/overall_kappa.csv
 ../results/kappa_by_category.xlsx
 ../figures/kappa_violin_by_operation.png
-
+```
 This confirms that the environment has been configured correctly.
 
 ---
