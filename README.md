@@ -244,13 +244,12 @@ Reproduces Table 5.
 Run:
 ```bash
 python reproduce_alpha_sensitivity.py
-
 ```
 Expected outputs:
-
+```text
 ../results/alpha_sensitivity_results.xlsx
 ../results/alpha_sensitivity_summary.csv
-
+```
 This reproduces the sensitivity analysis reported in Table 5 and evaluates the robustness of the SRS-based risk stratification under alternative α parameter settings.
 
 
