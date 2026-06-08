@@ -77,11 +77,13 @@ pip install -r requirements.txt
 ---
 
 # Environment Verification
-
-Run:
-
+From the repository root, navigate to the scripts directory:
 ```bash
-python scripts/reproduce_cosine_ecdf.py
+cd scripts
+```
+Run:
+```bash
+python reproduce_cosine_ecdf.py
 ```
 
 Successful execution should generate:
@@ -89,7 +91,6 @@ Successful execution should generate:
 ```text
 figures/ecdf_cosine_similarity.png
 ```
-
 This confirms that the environment has been configured correctly.
 
 ---
