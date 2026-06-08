@@ -90,6 +90,7 @@ Successful execution should:
 1. Complete without errors.
 2. Print the overall Cohen's κ values for collection and sharing disclosures.
 3. Generate the following files:
+```text
 ../results/overall_kappa.csv
 ../results/kappa_by_category.xlsx
 ../figures/kappa_violin_by_operation.png
