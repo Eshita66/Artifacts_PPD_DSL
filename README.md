@@ -108,22 +108,26 @@ RQ1 is reproduced using two scripts.
 ### Step 1: Reproduce overall agreement and misalignment rates
 
 This generates Figure 2.
+
 Run:
+
 ```bash
 python reproduce_prevalence.py
 ```
-Expected Outputs:
+Expected outputs:
 ```text
 ../figures/overall_consistency.png
 ```
 In addition to Figure 2, the script reports:
-- Daat category-level misalignment rates
+- Data category-level misalignment rates
 - Misalignment rates attributable to Data Safety Labels only
 - Misalignment rates attributable to Privacy Policies only
+  
 ### Step 2: Reproduce Cohen's κ analysis
 
 This generates Figure 3.
 Run:
+
 ```bash
 python reproduce_kappaScore.py
 ```
@@ -140,9 +144,10 @@ The script computes Cohen's κ scores for collection and sharing disclosures and
 ## Claim 2: Data Category-Level Misalignment Analysis (RQ2)
 
 ### Part A: Data Category-Level Misalignment Analysis
-Reproduces Figure 4, Figure 5, and Figure 6.
-The same script used for RQ1 also produces the overall consistency and misalginment analyses.
+Reproduces Figures 4–6.
+The same script used for RQ1 also computes the category-level misalignment analyses reported in Figures 4–6.
 Run:
+
 ```bash
 python reproduce_prevalence.py
 ```
@@ -155,7 +160,7 @@ Expected outputs:
 ../figures/category_level_over.png
 ```
 In addition to generating these figures, the script reports:
-- Data Category-level misalignment rates
+- Data category-level misalignment rates
 - Misalignment rates attributable to Data Safety Labels only
 - Misalignment rates attributable to Privacy Policies only
 - App-level misalignment prevalence
@@ -165,25 +170,28 @@ In addition to generating these figures, the script reports:
 
 ### Step 1: Generate cosine similarity dataset
 Run:
+
 ```bash
 python generate_cosine_similarity_dataset.py
 ```
-Expected Output:
+Expected output:
 ```text
 ../data/cosinesimilarity/global_label_vs_policy_similarity1460.csv
 ```
+This script computes cosine similarity scores between Privacy Policy and Data Safety Label disclosures and generates the dataset used for semantic consistency analysis.
 ### Step 2: Generate the ECDF of Cosine Similarity
 Reproduces Figure 7.
 Run:
+
 ```bash
 python reproduce_cosine_ecdf.py
 ```
-Expected Outputs:
+Expected outputs:
 ```text
 ../figures/ecdf_cosine_similarity.png
 ../results/cosine_ecdf_summary.csv
 ```
-This script computes cosine similarity scores between Privacy Policy and Data Safety Label disclosures and generates the dataset used for semantic consistency analysis.
+The script generates the ECDF visualization and summary statistics reported in Figure 7.
 
 ## Claim 3: Sensitivity Risk Score Analysis (RQ3)
 
@@ -193,7 +201,7 @@ Run:
 python reproduce_srs_distribution.py
 ```
 
-Expected Outputs:
+Expected outputs:
 ```text
 ../figures/scatter_SRS-Ow_vs_SRS-S_and_SRS-C_unlabeled_and_clustered_2.png
 ../results/srs_tier_summary.csv
@@ -211,6 +219,7 @@ The script computes:
 
 Reproduces Figures 9 and 10.
 Run:
+
 ```bash
 python reproduce_category_risk_and_popularity.py
 ```
@@ -242,6 +251,7 @@ These outputs examine the relationship between privacy misalignment risk and app
 Reproduces Table 5.
 
 Run:
+
 ```bash
 python reproduce_alpha_sensitivity.py
 ```
@@ -252,21 +262,20 @@ Expected outputs:
 ```
 This reproduces the sensitivity analysis reported in Table 5 and evaluates the robustness of the SRS-based risk stratification under alternative α parameter settings.
 
-
 # Data Collection Pipelines
+Note: The processed datasets required to reproduce all figures, tables, and quantitative findings reported in the paper are already included in the artifact. Running the DataSafetyScrapping and LLM_Privacify pipelines is optional and is not required for reproducing the published results.
 
-## DataSafetyScraping
+## DataSafetyScrapping
 
-The DataSafetyScraping component reproduces the collection of:
+The DataSafetyScrapping component reproduces the collection of:
 
-* Google Play Data Safety Labels
-* Privacy Policy URLs
+- Google Play Data Safety Labels
+- Privacy Policy URLs
 
-See:
+Detailed setup and execution instructions are provided in:
 
-```
-DataSafetyScraping/README.md for detailed instructions.
-
+```text
+DataSafetyScrapping/README.md
 ```
 ---
 
@@ -282,12 +291,10 @@ The pipeline:
 4. Extracts data sharing disclosures.
 5. Produces structured JSON outputs.
 
-See:
-
+Detailed setup and execution instructions are provided in:
 ```text
-LLM_Privacify/README.md for LM Studio configuration and execution instructions.
+LLM_Privacify/README.md
 ```
-
 
 ---
 
@@ -297,12 +304,12 @@ Approximate runtime on a standard desktop machine:
 
 | Task                      | Runtime  |
 | ------------------------- | -------- |
-| RQ1–RQ2 reproduction      | 2–5 min  |
+| RQ1–RQ2 reproduction      | 1–3 min  |
 | RQ3 reproduction          | <1 min   |
 | RQ4 reproduction          | <1 min   |
-| Full results reproduction | 5–10 min |
+| Full results reproduction | 5–8 min |
 
-Data collection pipelines require additional time depending on network conditions.
+Data collection pipelines may require additional time depending on hardware configuration, local LLM settings, and network conditions.
 
 ---
 
