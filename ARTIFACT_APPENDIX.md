@@ -240,6 +240,29 @@ Expected misalignment rates:
 | Collection | ≈ 33.1%           |
 | Sharing    | ≈ 31.1%           |
 
+## Experiment 1: Consistency Analysis (RQ1)
+
+### Figure 2: Overall Agreement and Misalignment Rates
+
+Run:
+
+```bash
+python reproduce_prevalence.py
+```
+
+Expected output:
+
+```text
+../figures/overall_consistency.png
+```
+
+Expected Figure 2 statistics:
+
+| Operation  | Agreement (PPD = DSL) | Misalignment in DSL Only | Misalignment in PPD Only |
+| ---------- | --------------------- | ------------------------ | ------------------------ |
+| Collection | ≈ 66.9%               | ≈ 23.7%                  | ≈ 9.5%                   |
+| Sharing    | ≈ 68.9%               | ≈ 26.0%                  | ≈ 5.0%                   |
+
 
 ### Figure 3: Cohen's κ Analysis
 
