@@ -114,9 +114,9 @@ python reproduce_prevalence.py
 ```
 Expected Outputs:
 ```text
-../figures\overall_consistency.png
+../figures/overall_consistency.png
 ```
-In addition to Figure 2, the script computes and reports:
+In addition to Figure 2, the script reports:
 - Daat category-level misalignment rates
 - Misalignment rates attributable to Data Safety Labels only
 - Misalignment rates attributable to Privacy Policies only
@@ -127,12 +127,18 @@ This generates Figure 3.
 ```bash
 python reproduce_kappaScore.py
 ```
-Expected Output:
-figures//kappa_violin_by_operation.png
 
+Expected outputs:
+```text
+../figures/kappa_violin_by_operation.png
+../results/overall_kappa.csv
+../results/kappa_by_category.xlsx
+```
+```markdown
+The script computes Cohen's κ scores for collection and sharing disclosures and generates the summary tables and visualization reported in Figure 3.
 ---
 
-## Claim 2: Category-Level Misalignment Analysis (RQ2)
+## Claim 2: Data Category-Level Misalignment Analysis (RQ2)
 
 # Part A: Category-Level Misalignment Analysis
 Reproduces Figure 4, Figure 5, and Figure 6.
