@@ -20,7 +20,7 @@ The artifact contains:
 
 1. A Google Play Data Safety Label (DSL) collection pipeline.
 2. A customized LLM-based privacy-policy analysis framework (LLM_Privacify).
-3. Processed datasets used in the study.
+3. Datasets used in the study.
 4. Analysis scripts reproducing the figures, tables, and quantitative findings reported in the paper.
 
 The artifact enables reproduction of the main results reported in Sections 4.1–4.4 as well as the supplementary analyses reported in the appendices.
@@ -53,8 +53,6 @@ Recommended:
 
 * 16 GB RAM or greater
 * Multi-core CPU
-
-The reproduction scripts do not require a GPU.
 
 For LLM_Privacify, additional memory may improve performance depending on the selected model.
 
@@ -112,14 +110,14 @@ Approximate runtimes:
 
 | Task              | Runtime      |
 | ----------------- | ------------ |
-| RQ1 reproduction  | 2–5 minutes  |
-| RQ2 reproduction  | < 2 minutes  |
+| RQ1 reproduction  | 1-3 minutes  |
+| RQ2 reproduction  | < 1 minutes  |
 | RQ3 reproduction  | < 1 minute   |
 | RQ4 reproduction  | < 1 minute   |
 | Appendix analyses | < 1 minute   |
-| Full reproduction | 5–15 minutes |
+| Full reproduction | 5–8 minutes |
 
-Data collection pipelines require additional time depending on network conditions.
+Data collection pipelines may require additional time depending on hardware configuration, local LLM settings, and network conditions.
 
 ---
 
@@ -176,47 +174,71 @@ pip install -r requirements.txt
 
 ## Testing the Environment
 
+After installing the required dependencies, navigate to the `scripts` directory:
+
+```bash
+cd scripts
+```
+
 Run:
 
 ```bash
-python scripts/reproduce_prevalence.py
+python reproduce_kappaScore.py
 ```
 
-Successful execution should generate output files in:
+Successful execution should:
+
+1. Complete without errors.
+2. Print the overall Cohen's κ values for collection and sharing disclosures.
+3. Generate the following files:
 
 ```text
-figures/
-results/
+../results/overall_kappa.csv
+../results/kappa_by_category.xlsx
+../figures/kappa_violin_by_operation.png
 ```
 
-This confirms that the analysis environment has been configured correctly.
+Expected console output should report approximately:
 
----
+```text
+Kappa (collection): 0.318
+Kappa (sharing): 0.167
+```
+This confirms that the analysis environment has been configured correctly.
 
 # Evaluation and Expected Results
 
+The following experiments reproduce the figures, tables, and quantitative findings reported in the paper. Unless otherwise specified, commands should be executed from the `scripts/` directory.
+
 ## Experiment 1: Consistency Analysis (RQ1)
 
-### Figure 2
+### Figure 2: Overall Agreement and Misalignment Rates
 
 Run:
 
 ```bash
-python scripts/reproduce_prevalence.py
+python reproduce_prevalence.py
 ```
 
 Expected output:
 
 ```text
-figures/overall_agreement_vs_misalignment.png
+../figures/overall_consistency.png
 ```
 
-Expected statistics:
+Expected agreement rates:
 
 | Operation  | Agreement Rate |
 | ---------- | -------------- |
-| Collection | 66.87%         |
-| Sharing    | 68.93%         |
+| Collection | ≈ 66.9%        |
+| Sharing    | ≈ 68.9%        |
+
+Expected misalignment rates:
+
+| Operation  | Misalignment Rate |
+| ---------- | ----------------- |
+| Collection | ≈ 33.1%           |
+| Sharing    | ≈ 31.1%           |
 
 Expected misaligned cells:
 
@@ -225,63 +247,86 @@ Expected misaligned cells:
 | Collection | 28,066           |
 | Sharing    | 26,322           |
 
-### Figure 3
+### Figure 3: Cohen's κ Analysis
 
 Run:
 
 ```bash
-python scripts/reproduce_kappaScore.py
-```
-
-Expected output:
-
-```text
-figures/violin_kappa_distribution.png
-```
-
-The generated distribution should visually match Figure 3 in the paper.
-
----
-
-## Experiment 2: Category-Level and Semantic Consistency Analysis (RQ2)
-
-### Figures 4–6
-
-Run:
-
-```bash
-python scripts/reproduce_prevalence.py
+python reproduce_kappaScore.py
 ```
 
 Expected outputs:
 
 ```text
-figures/category_level_misalignment.png
-figures/data_safety_only_misalignment.png
-figures/privacy_policy_only_misalignment.png
+../figures/kappa_violin_by_operation.png
+../results/overall_kappa.csv
+../results/kappa_by_category.xlsx
 ```
 
-### Figure 7
+Expected overall κ values:
 
-Generate cosine similarity data:
+| Operation  | Cohen's κ |
+| ---------- | --------- |
+| Collection | ≈ 0.318   |
+| Sharing    | ≈ 0.167   |
+
+The generated visualization should match Figure 3.
+
+---
+
+## Experiment 2: Data Category-Level and Semantic Consistency Analysis (RQ2)
+
+### Figures 4–6: Category-Level Misalignment Analysis
+
+Run:
 
 ```bash
-python scripts/generate_cosine_similarity_dataset.py
+python reproduce_prevalence.py
 ```
 
-Generate ECDF visualization:
-
-```bash
-python scripts/reproduce_cosine_ecdf.py
-```
-
-Expected output:
+Expected outputs:
 
 ```text
-figures/ecdf_cosine_similarity.png
+../figures/misalignment_heatmap.png
+../figures/category_level_under.png
+../figures/category_level_over.png
 ```
 
-The ECDF curves should visually match Figure 7.
+Expected observations:
+
+* Personal info exhibits the highest sharing misalignment (≈ 72.0%).
+* Device or other IDs exhibit high sharing misalignment (≈ 55.1%).
+* Location exhibits high collection misalignment (≈ 51.1%).
+
+### Figure 7: Semantic Consistency Analysis
+
+Generate the cosine similarity dataset:
+
+```bash
+python generate_cosine_similarity_dataset.py
+```
+
+Then generate the ECDF visualization:
+
+```bash
+python reproduce_cosine_ecdf.py
+```
+
+Expected outputs:
+
+```text
+../figures/ecdf_cosine_similarity.png
+../results/cosine_ecdf_summary.csv
+```
+
+Expected cosine similarity summary:
+
+| Scope     | Mean    | Median  |
+| --------- | ------- | ------- |
+| Shared    | ≈ 0.183 | ≈ 0.000 |
+| Collected | ≈ 0.461 | ≈ 0.479 |
+
+The generated ECDF should visually match Figure 7.
 
 ---
 
@@ -290,16 +335,25 @@ The ECDF curves should visually match Figure 7.
 Run:
 
 ```bash
-python scripts/reproduce_srs_distribution.py
+python reproduce_srs_distribution.py
 ```
 
-Expected output:
+Expected outputs:
 
 ```text
-figures/scatter_SRS-Ow_vs_SRS-S_and_SRS-C_unlabeled_and_clustered_2.png
+../figures/scatter_SRS-Ow_vs_SRS-S_and_SRS-C_unlabeled_and_clustered_2.png
+../results/srs_tier_summary.csv
 ```
 
-The resulting visualization should visually match Figure 8.
+Expected overall weighted risk-tier distribution:
+
+| Tier   | Apps | Percentage |
+| ------ | ---- | ---------- |
+| Low    | 3002 | 49.61%     |
+| Medium | 2971 | 49.10%     |
+| High   | 78   | 1.29%      |
+
+The generated visualization should match Figure 8.
 
 ---
 
@@ -308,23 +362,28 @@ The resulting visualization should visually match Figure 8.
 Run:
 
 ```bash
-python scripts/reproduce_category_risk_and_popularity.py
+python reproduce_category_risk_and_popularity.py
 ```
 
 Expected outputs:
 
 ```text
-figures/mean_SRS_by_category_top20.png
-figures/risk_tier_distribution_by_category_top20.png
+../figures/mean_SRS_by_category_top20.png
+../figures/risk_tier_distribution_by_category_top20.png
+../results/category_srs_stats.csv
+../results/risk_tier_distribution_by_category_top20.csv
 ```
 
-These correspond to Figures 9 and 10.
+These outputs reproduce Figures 9 and 10.
 
-Appendix E outputs:
+### Additional Quantitative Analysis (Appendix E)
+
+Additional outputs:
 
 ```text
-figures/rating_vs_SRS-O-weighted.png
-figures/downloads_vs_SRS-O-weighted_log10.png
+../figures/rating_vs_SRS-O-weighted.png
+../figures/downloads_vs_SRS-O-weighted_log10.png
+../results/srs_popularity_correlation_matrix.csv
 ```
 
 Expected correlation matrix:
@@ -339,44 +398,63 @@ downloads_num            0.072   0.075        0.667          1.000
 
 ---
 
-## Experiment 5: Appendix Robustness Analyses
+## Experiment 5: Alpha Sensitivity Analysis (Appendix H)
 
-### Alpha Sensitivity Analysis
+Reproduces Table 5.
 
 Run:
 
 ```bash
-python scripts/reproduce_alpha_sensitivity.py
+python reproduce_alpha_sensitivity.py
 ```
 
 Expected outputs:
 
 ```text
-results/alpha_sensitivity_results.xlsx
-results/alpha_sensitivity_summary.csv
+../results/alpha_sensitivity_results.xlsx
+../results/alpha_sensitivity_summary.csv
 ```
 
-The resulting table should match the appendix sensitivity analysis.
-
-### Generic Sharing Statement Analysis
-
-Run:
-
-```bash
-python scripts/reproduce_generic_sharing_ablation.py
-```
-
-Expected output:
-
-```text
-results/generic_sharing_analysis.csv
-```
-
-The resulting statistics should match the appendix robustness analysis.
+The resulting outputs should reproduce the alpha sensitivity analysis reported in Table 5 and demonstrate that the SRS-based risk stratification remains stable under alternative α parameter settings.
 
 ---
 
 # Notes
 
+The DataSafetyScrapping and LLM_Privacify components are included to support methodological reproducibility and future research. The processed datasets required to reproduce all figures, tables, and quantitative findings reported in the paper are already included in the artifact. Running these pipelines is optional and is not required for reproducing the published results.
+## Optional Pipeline Validation
 
-The DataSafetyScraping and LLM_Privacify components are included to support methodological reproducibility and future research.
+The artifact also includes the original data collection and privacy-policy analysis pipelines used to construct the datasets analyzed in the paper.
+
+### DataSafetyScrapping
+
+The DataSafetyScrapping component collects:
+
+* Google Play Data Safety Labels
+* Privacy Policy URLs
+
+Detailed setup, configuration, and execution instructions are provided in:
+
+```text
+DataSafetyScrapping/README.md
+```
+
+### LLM_Privacify
+
+The LLM_Privacify component reproduces the privacy-policy analysis pipeline used in the study.
+
+The pipeline:
+
+1. Downloads privacy policies.
+2. Chunks and preprocesses policy text.
+3. Extracts data collection disclosures.
+4. Extracts data sharing disclosures.
+5. Produces structured JSON outputs.
+
+Detailed setup, LM Studio configuration, and execution instructions are provided in:
+
+```text
+LLM_Privacify/README.md
+```
+
+These components are included to support methodological reproducibility and future extensions of the study. Execution of these pipelines is optional and is not required for reproducing the figures, tables, and quantitative findings reported in the paper.
