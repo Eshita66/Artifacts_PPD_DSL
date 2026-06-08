@@ -41,7 +41,7 @@ Artifacts_PPD_DSL/
 │
 ├── figures/
 ├── results/
-└── expected_results/
+
 ```
 
 ---
