@@ -142,7 +142,7 @@ A stable release tag corresponding to the evaluated artifact will be maintained.
 Clone the repository:
 
 ```bash
-git clone <repository_url>
+git clone https://github.com/Eshita66/Artifacts_PPD_DSL
 cd Artifacts_PPD_DSL
 ```
 
