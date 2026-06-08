@@ -134,9 +134,8 @@ Expected outputs:
 ../results/overall_kappa.csv
 ../results/kappa_by_category.xlsx
 ```
-```markdown
-The script computes Cohen's κ scores for collection and sharing disclosures and generates the summary tables and visualization reported in Figure 3.
----
+The script computes Cohen's κ scores for collection and sharing disclosures and generates the summary and visualization reported in Figure 3.
+
 
 ## Claim 2: Data Category-Level Misalignment Analysis (RQ2)
 
