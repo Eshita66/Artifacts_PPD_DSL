@@ -113,9 +113,17 @@ This generates Figure 2.
 python reproduce_prevalence.py
 ```
 Expected Outputs:
-figures/overall_agreement_vs_misalignment.png
+```text
+../figures\overall_consistency.png
+```
+In addition, the scripts report misalignment rate by data category,  Data Safety
+labels only,  privacy policies only
 
-The script also prints agreement and misalignment rates for collection and sharing.
+In addition to Figure 2, the script computes and reports:
+
+- Category-level misalignment rates
+- Misalignment rates attributable to Data Safety Labels only
+- Misalignment rates attributable to Privacy Policies only
 ### Step 2: Reproduce Cohen's κ analysis
 
 This generates Figure 3.
