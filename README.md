@@ -139,48 +139,49 @@ The script computes Cohen's κ scores for collection and sharing disclosures and
 
 ## Claim 2: Data Category-Level Misalignment Analysis (RQ2)
 
-# Part A: Category-Level Misalignment Analysis
+### Part A: Data Category-Level Misalignment Analysis
 Reproduces Figure 4, Figure 5, and Figure 6.
-
+The same script used for RQ1 also produces the overall consistency and misalginment analyses.
 Run:
-
 ```bash
 python reproduce_prevalence.py
 ```
 
 Expected outputs:
-figures/category_level_misalignment.png
-figures/data_safety_only_misalignment.png
-figures/privacy_policy_only_misalignment.png
-
+```text
+../figures/overall_consistency.png
+../figures/misalignment_heatmap.png
+../figures/category_level_under.png
+../figures/category_level_over.png
+```
+In addition to generating these figures, the script reports:
+- Data Category-level misalignment rates
+- Misalignment rates attributable to Data Safety Labels only
+- Misalignment rates attributable to Privacy Policies only
+- App-level misalignment prevalence
 ---
 
-# Part B: Semantic Consistency Analysis
+### Part B: Semantic Consistency Analysis
 
 ### Step 1: Generate cosine similarity dataset
-
 ```bash
 python generate_cosine_similarity_dataset.py
 ```
-
-Output:
-
+Expected Output:
 ```text
-data/cosinesimilarity/global_label_vs_policy_similarity1460.csv
+../data/cosinesimilarity/global_label_vs_policy_similarity1460.csv
 ```
-
-### Step 2: Generate Figure 7
-
+### Step 2: Generate the ECDF of Cosine Similarity
+Reproduces Figure 7
 ```bash
 python reproduce_cosine_ecdf.py
 ```
-
-Output:
-
+Expected Output:
 ```text
-figures/ecdf_cosine_similarity.png
+../figures/ecdf_cosine_similarity.png
+../results/cosine_ecdf_summary.csv
 ```
----
+This script computes cosine similarity scores between Privacy Policy and Data Safety Label disclosures and generates the dataset used for semantic consistency analysis.
 
 ## Claim 3: Sensitivity Risk Score Analysis (RQ3)
 
