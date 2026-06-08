@@ -1,0 +1,276 @@
+{
+    "Unicorn HTTPS:Secure & Fast": {
+        "No data shared with third parties": {},
+        "Data collected": {
+            "App info and performance": "Crash logs and Diagnostics",
+            "App activity": "App interactions"
+        },
+        "Security practices": {
+            "Data is encrypted in transit": "Your data is transferred over a secure connection",
+            "Data can’t be deleted": "The developer doesn’t provide a way for you to request that your data be deleted"
+        }
+    },
+    "Kpopsies - Hatch Baby Unicorns": {
+        "Data shared": {
+            "Device or other IDs": "Device or other IDs",
+            "Location": "Approximate location"
+        },
+        "No data collected": {},
+        "Security practices": {
+            "Data is encrypted in transit": "Your data is transferred over a secure connection",
+            "You can request that data be deleted": "The developer provides a way for you to request that your data be deleted",
+            "Committed to follow the Play Families Policy": "The developer has committed to follow the Play Families Policy for this app.See the policy"
+        }
+    },
+    "My Magical Unicorn Girls Games": {
+        "No data shared with third parties": {},
+        "Data collected": {
+            "Financial info": "Purchase history",
+            "Device or other IDs": "Device or other IDs",
+            "Personal info": "Email address and User IDs",
+            "App activity": "App interactions, Installed apps, and Other actions",
+            "App info and performance": "Crash logs, Diagnostics, and Other app performance data"
+        },
+        "Security practices": {
+            "Data is encrypted in transit": "Your data is transferred over a secure connection",
+            "You can request that data be deleted": "The developer provides a way for you to request that your data be deleted",
+            "Committed to follow the Play Families Policy": "The developer has committed to follow the Play Families Policy for this app.See the policy"
+        }
+    },
+    "My little unicorn：Pets academy": {
+        "No data shared with third parties": {},
+        "No data collected": {},
+        "Security practices": {
+            "Data is encrypted in transit": "Your data is transferred over a secure connection",
+            "Data can’t be deleted": "The developer doesn’t provide a way for you to request that your data be deleted"
+        }
+    },
+    "My Baby Unicorn - Pony Care": {
+        "Data shared": {
+            "Location": "Approximate location",
+            "Device or other IDs": "Device or other IDs"
+        },
+        "No data collected": {},
+        "Security practices": {
+            "Data is encrypted in transit": "Your data is transferred over a secure connection",
+            "You can request that data be deleted": "The developer provides a way for you to request that your data be deleted",
+            "Committed to follow the Play Families Policy": "The developer has committed to follow the Play Families Policy for this app.See the policy"
+        }
+    },
+    "Acorns: Save & Invest Money": {
+        "Data shared": {
+            "Messages": "Other in-app messages"
+        },
+        "Data collected": {
+            "Device or other IDs": "Device or other IDs",
+            "App info and performance": "Crash logs, Diagnostics, and Other app performance data",
+            "Financial info": "User payment info, Purchase history, and Other financial info",
+            "Personal info": "Name, Email address, User IDs, Address, Phone number, and Other info",
+            "Messages": "Other in-app messages",
+            "Location": "Approximate location and Precise location",
+            "Photos and videos": "Photos",
+            "App activity": "App interactions, In-app search history, and Other user-generated content"
+        },
+        "Security practices": {
+            "Data is encrypted in transit": "Your data is transferred over a secure connection",
+            "You can request that data be deleted": "The developer provides a way for you to request that your data be deleted"
+        }
+    },
+    "WalletHub: Credit & Budgeting": {
+        "Data shared": {
+            "Financial info": "Credit score and Other financial info"
+        },
+        "Data collected": {
+            "App info and performance": "Crash logs and Diagnostics",
+            "Financial info": "Credit score and Other financial info",
+            "App activity": "App interactions, In-app search history, Other user-generated content, and Other actions",
+            "Device or other IDs": "Device or other IDs",
+            "Personal info": "Name, Email address, User IDs, Address, Phone number, and Other info"
+        },
+        "Security practices": {
+            "Data is encrypted in transit": "Your data is transferred over a secure connection",
+            "You can request that data be deleted": "The developer provides a way for you to request that your data be deleted"
+        }
+    },
+    "Origin: AI Budget & Track": {
+        "Data shared": {
+            "Device or other IDs": "Device or other IDs",
+            "App info and performance": "Crash logs, Diagnostics, and Other app performance data"
+        },
+        "Data collected": {
+            "App activity": "App interactions",
+            "Financial info": "User payment info, Purchase history, Credit score, and Other financial info",
+            "Files and docs": "Files and docs",
+            "Messages": "Other in-app messages",
+            "Personal info": "Name, Email address, User IDs, Address, Phone number, and Other info",
+            "Location": "Approximate location"
+        },
+        "Security practices": {
+            "Data is encrypted in transit": "Your data is transferred over a secure connection",
+            "You can request that data be deleted": "The developer provides a way for you to request that your data be deleted"
+        }
+    },
+    "M1: Invest & Bank Smarter": {
+        "Data shared": {
+            "Device or other IDs": "Device or other IDs",
+            "App info and performance": "Crash logs and Diagnostics",
+            "Files and docs": "Files and docs",
+            "Photos and videos": "Photos",
+            "Financial info": "User payment info, Purchase history, and Other financial info",
+            "Personal info": "Name, Email address, User IDs, Address, Phone number, and Other info",
+            "App activity": "App interactions"
+        },
+        "Data collected": {
+            "Device or other IDs": "Device or other IDs",
+            "App info and performance": "Crash logs and Diagnostics",
+            "Files and docs": "Files and docs",
+            "Photos and videos": "Photos",
+            "Financial info": "User payment info, Purchase history, and Other financial info",
+            "Personal info": "Name, Email address, User IDs, Address, Phone number, and Other info",
+            "App activity": "App interactions, Other user-generated content, and Other actions"
+        },
+        "Security practices": {
+            "Data is encrypted in transit": "Your data is transferred over a secure connection",
+            "You can request that data be deleted": "The developer provides a way for you to request that your data be deleted"
+        }
+    },
+    "UWorld Finance - Exam Prep": {
+        "No data shared with third parties": {},
+        "No data collected": {},
+        "Security practices": {
+            "Data is encrypted in transit": "Your data is transferred over a secure connection",
+            "You can request that data be deleted": "The developer provides a way for you to request that your data be deleted"
+        }
+    },
+    "Albert: Budgeting and Banking": {
+        "Data shared": {
+            "Personal info": "Name, User IDs, Address, Phone number, and Other info",
+            "Financial info": "User payment info and Other financial info",
+            "App activity": "App interactions",
+            "App info and performance": "Crash logs, Diagnostics, and Other app performance data",
+            "Device or other IDs": "Device or other IDs"
+        },
+        "Data collected": {
+            "Files and docs": "Files and docs",
+            "Personal info": "Name, Email address, User IDs, Address, Phone number, and Other info",
+            "Financial info": "User payment info, Purchase history, Credit score, and Other financial info",
+            "App activity": "App interactions",
+            "Contacts": "Contacts",
+            "App info and performance": "Crash logs, Diagnostics, and Other app performance data",
+            "Device or other IDs": "Device or other IDs"
+        },
+        "Security practices": {
+            "Data is encrypted in transit": "Your data is transferred over a secure connection",
+            "You can request that data be deleted": "The developer provides a way for you to request that your data be deleted"
+        }
+    },
+    "Financial Management Quiz BBA": {
+        "Data shared": {
+            "App info and performance": "Other app performance data"
+        },
+        "Data collected": {
+            "Location": "Approximate location"
+        },
+        "Security practices": {
+            "Data is encrypted in transit": "Your data is transferred over a secure connection",
+            "You can request that data be deleted": "The developer provides a way for you to request that your data be deleted"
+        }
+    },
+    "EveryDollar: Budget Management": {
+        "Data shared": {
+            "Personal info": "Name, Email address, and User IDs",
+            "App info and performance": "Crash logs, Diagnostics, and Other app performance data",
+            "Messages": "Other in-app messages",
+            "App activity": "App interactions and Other actions",
+            "Financial info": "Purchase history",
+            "Device or other IDs": "Device or other IDs"
+        },
+        "Data collected": {
+            "Personal info": "Name, Email address, and User IDs",
+            "App info and performance": "Crash logs, Diagnostics, and Other app performance data",
+            "Messages": "Other in-app messages",
+            "App activity": "App interactions and Other actions",
+            "Financial info": "Purchase history",
+            "Device or other IDs": "Device or other IDs"
+        },
+        "Security practices": {
+            "Data is encrypted in transit": "Your data is transferred over a secure connection",
+            "You can request that data be deleted": "The developer provides a way for you to request that your data be deleted"
+        }
+    },
+    "Banking and Finance Exam Test": {
+        "No data shared with third parties": {},
+        "Data collected": {
+            "App info and performance": "Crash logs",
+            "Personal info": "Email address",
+            "Device or other IDs": "Device or other IDs"
+        },
+        "Security practices": {
+            "Data isn’t encrypted": "Your data isn’t transferred over a secure connection",
+            "You can request that data be deleted": "The developer provides a way for you to request that your data be deleted"
+        }
+    },
+    "Quartr: Financial Research": {
+        "Data shared": {
+            "Location": "Approximate location",
+            "Personal info": "Name, Email address, and User IDs",
+            "Photos and videos": "Photos",
+            "Device or other IDs": "Device or other IDs",
+            "App activity": "App interactions, In-app search history, Other user-generated content, and Other actions"
+        },
+        "Data collected": {
+            "App info and performance": "Crash logs, Diagnostics, and Other app performance data",
+            "Location": "Approximate location",
+            "Personal info": "Name, Email address, and User IDs",
+            "Photos and videos": "Photos",
+            "Device or other IDs": "Device or other IDs",
+            "App activity": "App interactions, In-app search history, Other user-generated content, and Other actions"
+        },
+        "Security practices": {
+            "Data is encrypted in transit": "Your data is transferred over a secure connection",
+            "You can request that data be deleted": "The developer provides a way for you to request that your data be deleted"
+        }
+    },
+    "10Q Reports: Finance, Stock, 1": {
+        "Data shared": {
+            "Financial info": "User payment info"
+        },
+        "Data collected": {
+            "App info and performance": "Crash logs and Other app performance data",
+            "Financial info": "User payment info",
+            "Location": "Approximate location and Precise location",
+            "Personal info": "Name, Email address, and User IDs",
+            "App activity": "App interactions and In-app search history"
+        },
+        "Security practices": {
+            "Data is encrypted in transit": "Your data is transferred over a secure connection",
+            "You can request that data be deleted": "The developer provides a way for you to request that your data be deleted"
+        }
+    },
+    "QUIZ FINANCE": {
+        "No data shared with third parties": {},
+        "Data collected": {
+            "Location": "Precise location"
+        },
+        "Security practices": {
+            "Data is encrypted in transit": "Your data is transferred over a secure connection",
+            "You can request that data be deleted": "The developer provides a way for you to request that your data be deleted"
+        }
+    },
+    "DailyPay On-Demand Pay": {
+        "Data shared": {
+            "Location": "Approximate location"
+        },
+        "Data collected": {
+            "App activity": "App interactions",
+            "App info and performance": "Crash logs, Diagnostics, and Other app performance data",
+            "Device or other IDs": "Device or other IDs",
+            "Financial info": "User payment info",
+            "Personal info": "Name, Email address, User IDs, Address, and Phone number"
+        },
+        "Security practices": {
+            "Data is encrypted in transit": "Your data is transferred over a secure connection",
+            "You can request that data be deleted": "The developer provides a way for you to request that your data be deleted"
+        }
+    }
+}

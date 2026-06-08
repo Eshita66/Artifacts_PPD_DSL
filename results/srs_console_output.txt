@@ -1,0 +1,41 @@
+Total apps: 6051
+
+SRS-C:
+  86 apps (1.42%) above 70%
+  Low (< 30%): 2649 apps (43.78%)
+  Medium (30%–70%): 3316 apps (54.80%)
+  High (≥ 70%): 86 apps (1.42%)
+
+SRS-S:
+  177 apps (2.93%) above 70%
+  Low (< 30%): 3176 apps (52.49%)
+  Medium (30%–70%): 2698 apps (44.59%)
+  High (≥ 70%): 177 apps (2.93%)
+
+SRS-O:
+  73 apps (1.21%) above 70%
+  Low (< 30%): 3023 apps (49.96%)
+  Medium (30%–70%): 2955 apps (48.83%)
+  High (≥ 70%): 73 apps (1.21%)
+
+SRS-O-weighted:
+  71 apps (1.17%) above 70%
+  Low (< 30%): 3002 apps (49.61%)
+  Medium (30%–70%): 2971 apps (49.10%)
+  High (≥ 70%): 78 apps (1.29%)
+
+Saved SRS summary table to: ../results\srs_tier_summary.csv
+
+Counts per tier (overall weighted):
+risk_tier_overall
+Low       3002
+Medium    2971
+High        78
+Name: count, dtype: int32
+
+Counts and percentages per tier (overall weighted):
+  Low   : 3002 apps (49.61%)
+  Medium: 2971 apps (49.10%)
+  High  : 78 apps (1.29%)
+
+Saved Figure 8 to: ../figures\scatter_SRS-Ow_vs_SRS-S_and_SRS-C_unlabeled_and_clustered_2.png

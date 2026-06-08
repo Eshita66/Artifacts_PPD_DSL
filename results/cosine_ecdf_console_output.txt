@@ -1,0 +1,13 @@
+Loaded input file: ../data/cosinesimilarity/global_label_vs_policy_similarity1460.csv
+section_scope
+shared       6051
+collected    6051
+Name: count, dtype: int64
+Cosine similarity summary:
+  section_scope     n      mean  median  min  max  pct_near_zero_le_0_05  pct_high_ge_0_80
+0        shared  6051  0.183040  0.0000  0.0  1.0               0.540407          0.001983
+1     collected  6051  0.460716  0.4788  0.0  1.0               0.029417          0.011568
+
+Saved summary to: ../results\cosine_ecdf_summary.csv
+
+Figure saved to: G:\Artifacts_PPD_DSL\figures\ecdf_cosine_similarity.png

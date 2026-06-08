@@ -1,0 +1,57 @@
+Category-level stats (SRS-O-weighted):
+                            count      mean    median       std
+Category                                                       
+wearables                       2  0.563889  0.563889  0.113923
+communication                   8  0.556250  0.583333  0.097338
+ANDROID_WEAR                    5  0.555556  0.616667  0.255616
+recipes                         2  0.544444  0.544444  0.117851
+group planning tools            6  0.512963  0.455556  0.167541
+...                           ...       ...       ...       ...
+instrument tuner pro            4  0.163889  0.136111  0.085165
+budget planner                  4  0.158333  0.141667  0.077579
+editing                         1  0.150000  0.150000       NaN
+electrical wiring diagrams      4  0.126389  0.122222  0.008333
+gift budget planner             1  0.100000  0.100000       NaN
+
+[419 rows x 4 columns]
+
+Saved category stats to: ../results\category_srs_stats.csv
+Saved Figure 9 to: ../figures\mean_SRS_by_category_top20.png
+
+Risk tier distribution by category (proportions, top 20 categories):
+risk_tier_overall            Low  Medium   High
+Category                                       
+ANDROID_WEAR               0.200   0.600  0.200
+CRM mobile                 0.250   0.750  0.000
+EV charging locator        0.222   0.778  0.000
+communication              0.000   1.000  0.000
+edge AI apps               0.222   0.667  0.111
+fitness                    0.143   0.857  0.000
+graphic design studio      0.333   0.667  0.000
+group planning tools       0.000   0.833  0.167
+home                       0.200   0.600  0.200
+home renovation estimator  0.000   1.000  0.000
+lead management tools      0.000   1.000  0.000
+learning                   0.286   0.571  0.143
+recipes                    0.000   1.000  0.000
+remote desktop             0.226   0.613  0.161
+sleep tracker              0.083   0.833  0.083
+tools                      0.083   0.833  0.083
+video editing suite        0.000   1.000  0.000
+wearables                  0.000   1.000  0.000
+wellness                   0.111   0.889  0.000
+woodworking calculators    0.000   1.000  0.000
+
+Saved risk tier distribution to: ../results\risk_tier_distribution_by_category_top20.csv
+Saved Figure 10 to: ../figures\risk_tier_distribution_by_category_top20.png
+Saved Appendix popularity figure to: ../figures\rating_vs_SRS-O-weighted.png
+Saved Appendix popularity figure to: ../figures\downloads_vs_SRS-O-weighted_log10.png
+
+Correlation matrix (SRS vs popularity metrics):
+                SRS-O-weighted  rating  reviews_num  downloads_num
+SRS-O-weighted           1.000  -0.001        0.034          0.072
+rating                  -0.001   1.000        0.034          0.075
+reviews_num              0.034   0.034        1.000          0.667
+downloads_num            0.072   0.075        0.667          1.000
+
+Saved correlation matrix to: ../results\srs_popularity_correlation_matrix.csv

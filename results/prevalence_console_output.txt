@@ -1,0 +1,49 @@
+Cell-level prevalence by operation:
+           is_mis  is_under  is_over  N_cells  misalign_rate  under_rate  over_rate  agree_rate
+Operation                                                                                      
+collected   28066     20054     8012    84714       0.331303    0.236726   0.094577    0.668697
+shared      26322     22060     4262    84714       0.310716    0.260406   0.050310    0.689284
+
+Category-level prevalence:
+                                    is_mis  is_under  is_over  N_cells  misalign_rate  under_rate  over_rate
+Operation Category                                                                                          
+collected App activity                2968       554     2414     6051       0.490497    0.091555   0.398942
+          App info and performance    2663       908     1755     6051       0.440093    0.150058   0.290035
+          Audio                        955       606      349     6051       0.157825    0.100149   0.057676
+          Calendar                    1470      1391       79     6051       0.242935    0.229879   0.013056
+          Contacts                    2002      1769      233     6051       0.330854    0.292348   0.038506
+          Device or other IDs         1552      1385      167     6051       0.256487    0.228888   0.027599
+          Files and docs              1069       532      537     6051       0.176665    0.087919   0.088746
+          Financial info              2661      2021      640     6051       0.439762    0.333994   0.105768
+          Health and fitness           868       719      149     6051       0.143447    0.118823   0.024624
+          Location                    3094      2697      397     6051       0.511320    0.445711   0.065609
+          Messages                    2485      2026      459     6051       0.410676    0.334821   0.075855
+          Personal info               1659      1540      119     6051       0.274170    0.254503   0.019666
+          Photos and videos           3120      2481      639     6051       0.515617    0.410015   0.105602
+          Web browsing                1500      1425       75     6051       0.247893    0.235498   0.012395
+shared    App activity                2511      1354     1157     6051       0.414973    0.223765   0.191208
+          App info and performance    2839      1648     1191     6051       0.469179    0.272352   0.196827
+          Audio                        594       524       70     6051       0.098166    0.086597   0.011568
+          Calendar                     974       963       11     6051       0.160965    0.159147   0.001818
+          Contacts                    1492      1468       24     6051       0.246571    0.242605   0.003966
+          Device or other IDs         3334      2951      383     6051       0.550983    0.487688   0.063295
+          Files and docs               580       469      111     6051       0.095852    0.077508   0.018344
+          Financial info              2506      2213      293     6051       0.414146    0.365725   0.048422
+          Health and fitness           696       658       38     6051       0.115022    0.108742   0.006280
+          Location                    3001      2579      422     6051       0.495951    0.426211   0.069741
+          Messages                     926       745      181     6051       0.153033    0.123120   0.029912
+          Personal info               4359      4212      147     6051       0.720377    0.696083   0.024294
+          Photos and videos           1651      1438      213     6051       0.272847    0.237647   0.035201
+          Web browsing                 859       838       21     6051       0.141960    0.138490   0.003471
+
+App-level prevalence by operation:
+           any_mis_app  any_under_app  any_over_app  N_apps  misalign_rate_app  under_rate_app  over_rate_app
+Operation                                                                                                    
+collected         6023           5445          3921    6051           0.995373        0.899851       0.647992
+shared            5971           5604          2140    6051           0.986779        0.926128       0.353661
+
+Saved result tables to results folder.
+Saved Figure 2 to: ../figures\overall_consistency.png
+Saved Figure 4 to: ../figures\misalignment_heatmap.png
+Saved category figure to: ../figures\category_level_under.png
+Saved category figure to: ../figures\category_level_over.png

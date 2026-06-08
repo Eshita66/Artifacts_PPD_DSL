@@ -1,0 +1,40 @@
+# Core analysis
+pandas>=2.2.0
+numpy>=1.26.0
+matplotlib>=3.8.0
+scipy>=1.11.0
+scikit-learn>=1.4.0
+statsmodels>=0.14.0
+openpyxl>=3.1.0
+
+# Web scraping
+requests>=2.32.0
+beautifulsoup4>=4.12.0
+lxml>=5.0.0
+langdetect>=1.0.9
+
+# Selenium / browser automation for Google Play privacy-policy link collection
+selenium>=4.28.0
+webdriver-manager>=4.0.2
+
+# LLM_Privacify / LangChain
+langchain>=0.3.0
+langchain-community>=0.3.0
+langchain-openai>=0.2.0
+langchain-text-splitters>=0.3.0
+tiktoken>=0.7.0
+
+# FastAPI backend used by LLM_Privacify
+fastapi>=0.115.0
+uvicorn>=0.34.0
+sqlmodel>=0.0.22
+pydantic>=2.0.0
+
+# Authentication utilities used in backend
+passlib[bcrypt]>=1.7.4
+python-jose>=3.3.0
+python-multipart>=0.0.9
+
+# Utilities
+python-dotenv>=1.0.1
+tqdm>=4.66.0

@@ -1,0 +1,5 @@
+Alpha (sharing weight),Low apps,Low (%),Medium apps,Medium (%),High apps,High (%),Same tier as baseline apps,Same tier as baseline (%)
+0.4,2834,46.84,3144,51.96,73,1.21,5480,90.56
+0.5,3023,49.96,2955,48.83,73,1.21,5809,96.0
+0.6,3002,49.61,2971,49.1,78,1.29,6051,100.0
+0.7,3087,51.02,2881,47.61,83,1.37,5821,96.2

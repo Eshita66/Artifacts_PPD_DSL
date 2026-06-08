@@ -1,0 +1,8 @@
+=== Overall Kappa by Operation ===
+Kappa (collection): 0.318
+Kappa (sharing):   0.167
+Difference (sharing - collection): -0.152
+
+Saved overall Kappa table to: ../results\overall_kappa.csv
+Saved category-level Kappa table to: ../results\kappa_by_category.xlsx
+Saved Kappa violin plot to: ../figures\kappa_violin_by_operation.png
