@@ -104,7 +104,7 @@ http://127.0.0.1:5000/v1
 
 Artifact size:
 
-* Approximately XX GB
+* Approximately 686 MB
 
 Approximate runtimes:
 
