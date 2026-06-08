@@ -116,12 +116,8 @@ Expected Outputs:
 ```text
 ../figures\overall_consistency.png
 ```
-In addition, the scripts report misalignment rate by data category,  Data Safety
-labels only,  privacy policies only
-
 In addition to Figure 2, the script computes and reports:
-
-- Category-level misalignment rates
+- Daat category-level misalignment rates
 - Misalignment rates attributable to Data Safety Labels only
 - Misalignment rates attributable to Privacy Policies only
 ### Step 2: Reproduce Cohen's κ analysis
