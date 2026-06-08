@@ -130,7 +130,7 @@ Data collection pipelines require additional time depending on network condition
 The artifact is available through the project repository:
 
 ```text
-<GitHub repository URL>
+https://github.com/Eshita66/Artifacts_PPD_DSL
 ```
 
 A stable release tag corresponding to the evaluated artifact will be maintained.
