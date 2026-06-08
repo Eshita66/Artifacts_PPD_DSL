@@ -77,20 +77,23 @@ pip install -r requirements.txt
 ---
 
 # Environment Verification
-From the repository root, navigate to the scripts directory:
+After installing the required dependencies, navigate to the scripts directory:
 ```bash
 cd scripts
 ```
 Run:
 ```bash
-python reproduce_cosine_ecdf.py
+python reproduce_kappaScore.py
 ```
 
-Successful execution should generate:
+Successful execution should:
+1. Complete without errors.
+2. Print the overall Cohen's κ values for collection and sharing disclosures.
+3. Generate the following files:
+../results/overall_kappa.csv
+../results/kappa_by_category.xlsx
+../figures/kappa_violin_by_operation.png
 
-```text
-figures/ecdf_cosine_similarity.png
-```
 This confirms that the environment has been configured correctly.
 
 ---
@@ -120,7 +123,7 @@ This generates Figure 3.
 python reproduce_kappaScore.py
 ```
 Expected Output:
-figures/violin_kappa_distribution.png
+figures//kappa_violin_by_operation.png
 
 ---
 
