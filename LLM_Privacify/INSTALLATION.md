@@ -172,6 +172,9 @@ Approximate runtime depends on policy length, model configuration, and local har
 | 5 policies | 5–10 minutes         |
 
 ---
+# Hardware Note
+
+The extraction pipeline uses a locally hosted LLM. Runtime varies depending on CPU, GPU, available memory, model quantization, and LM Studio configuration. Systems with dedicated GPUs generally provide significantly faster execution than CPU-only systems.
 
 # Notes
 
