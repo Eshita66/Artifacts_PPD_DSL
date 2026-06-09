@@ -74,7 +74,7 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
----
+Note: The root requirements.txt installs all dependencies required for the artifact. Component-specific requirements.txt files are provided for standalone use of DataSafetyScrapping and LLM_Privacify.
 
 # Environment Verification
 After installing the required dependencies, navigate to the scripts directory:
