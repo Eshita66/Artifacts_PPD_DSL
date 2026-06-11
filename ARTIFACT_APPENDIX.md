@@ -43,17 +43,17 @@ No external API keys are required.
 
 ## Hardware Requirements
 
-Minimum for Reproducing Paper Results:
+Minimum :
 
 * Standard desktop or laptop computer
 * 8 GB RAM
 * 10 GB available disk space
 
-Recommended for Reproducing the Full Privacy-Policy Analysis Pipeline (LLM_Privacify):
+Recommended :
 
 * 16 GB RAM or greater
-* Modern GPU recommended
-* Recommended: NVIDIA RTX 4090
+* Modern GPU recommended for LLM-based privacy policy analysis
+* Recommended GPU: NVIDIA RTX 4090 (used in our experiments)
 
 For LLM_Privacify, additional memory may improve performance depending on the selected model.
 
@@ -64,7 +64,7 @@ For LLM_Privacify, additional memory may improve performance depending on the se
 * GPU: NVIDIA RTX 4090
 * OS: Windows 11
 
-The analysis scripts themselves do not require this hardware configuration.
+The analysis scripts used to reproduce the paper's figures, tables, and quantitative results do not require this hardware configuration. However, reproducing the full LLM_Privacify pipeline using LM Studio may benefit significantly from GPU acceleration.
 
 ---
 
